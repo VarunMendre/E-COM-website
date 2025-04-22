@@ -60,7 +60,7 @@ The application uses the following tables:
 
 ## 📸 Screenshots
 
-*Add screenshots here showing the vendor dashboard, customer home, cart, and payment page.*
+*Added some screenshots to project_img folder showing the vendor dashboard, customer home, cart, and payment page.*
 
 ---
 
