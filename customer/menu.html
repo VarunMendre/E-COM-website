@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Light gray background */
+        }
+
+        /* Parent container for the menu */
+        .parent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* White background for the menu bar */
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Child container for the menu buttons */
+        .child {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Styling for the buttons */
+        .home-bt, .lg-bt {
+            background-color: #007bff; /* Blue color for buttons (matching login page accents) */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for buttons */
+        .home-bt:hover, .lg-bt:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Logout button styling */
+        .lg-bt {
+            background-color: #6c757d; /* Gray color for logout (neutral and less prominent) */
+        }
+
+        .lg-bt:hover {
+            background-color: #5a6268; /* Darker gray on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <!-- Menu buttons -->
+        <div class="child">
+            <a href="home.php">
+                <button class="home-bt">View Product</button>
+            </a>
+            <a href="viewcart.php">
+                <button class="home-bt">View Cart</button>
+            </a>
+            <a href="trackorder.php">
+                <button class="home-bt">Track Order</button>
+            </a>
+            <a href="returns.php">
+                <button class="home-bt">My Returns</button>
+            </a>
+        </div>
+
+        <!-- Logout button -->
+        <div>
+            <a href="../shared/logout.php">
+                <button class="lg-bt">Logout</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

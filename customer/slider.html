@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f8f9fa; 
+            padding: 20px; 
+        }
+
+        /* Slider styles */
+        .slider-container {
+            max-width: 1200px;
+            height: 500px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            text-align: center;
+        }
+
+        .slide-content h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .slide-content p {
+            margin: 15px 0 0;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .slider-btn:hover {
+            background: rgba(255,255,255,1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev-btn {
+            left: 20px;
+        }
+
+        .next-btn {
+            right: 20px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .slider-container {
+                height: 300px;
+            }
+
+            .slide-content h2 {
+                font-size: 20px;
+            }
+
+            .slide-content p {
+                font-size: 14px;
+            }
+
+            .slider-btn {
+                padding: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider Section -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="../images/Kids_summer.jpeg" alt="Kids Summer Slam">
+                <div class="slide-content">
+                    <h2>Kids' Summer Slam</h2>
+                    <p>Sports gear for your kids starting ₹149</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../images/electronics poster.jpg" alt="Electronics Sale">
+                <div class="slide-content">
+                    <h2>Electronics Bonanza</h2>
+                    <p>Up to 40% off on latest gadgets</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../images/fasion.jpg" alt="Fashion Sale">
+                <div class="slide-content">
+                    <h2>Fashion Festival</h2>
+                    <p>Min 50% off on trending styles</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../images/grocery.avif" alt="Groceries Sale">
+                <div class="slide-content">
+                    <h2>Grocery Offer</h2>
+                    <p>Min 30% off on Buy 1 Get 1</p>
+                </div>
+            </div>
+        </div>
+        
+        <button class="slider-btn prev-btn">←</button>
+        <button class="slider-btn next-btn">→</button>
+        
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</body>
+</html>
